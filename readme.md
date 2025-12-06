@@ -4,6 +4,16 @@ Det är en Svenskt myndighets-issued Attribute Certificate, typiskt från TRM/Pl
 
 X509AttributeCertificate
 
+Exakt tolkning (vad du med mycket hög sannolikhet har)
+
+Ett testcertifikat (subject: Pliktverket AM AA test), utfärdat av en Test CA (TRM Test CA v1).
+
+Kryptering: RSA-public key + signatur med SHA-1 + RSA.
+
+Giltighet: 2025-12-05 07:48:25 → 2025-12-05 08:08:55 (ca 20 minuter).
+
+Extensions: AuthorityInfoAccess (AIA) med lokal URL, SubjectAltName med åtminstone en ipAddress och andra fält som pekar mot interna tjänster (minsida.pliktverket.local), plus LoA-URL http://id.elegnamnden.se/loa/1.0/loa2.
+
 mvn -DskipTests package
 
 # 2) För att generera test certifikat kör programmet (jar-with-dependencies skapas av assembly-plugin)

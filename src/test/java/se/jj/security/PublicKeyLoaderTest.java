@@ -12,7 +12,6 @@ public class PublicKeyLoaderTest {
     public void testLoadPublicKey() throws Exception {
         Path keyPath = Path.of("src/test/resources/testkey.pub");
 
-
         PublicKeyLoader loader = new PublicKeyLoader();
         PublicKey key = loader.loadPublicKey(keyPath);
 

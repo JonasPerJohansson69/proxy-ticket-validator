@@ -1,0 +1,70 @@
+    0:d=0  hl=4 l= 794 cons: SEQUENCE          
+    4:d=1  hl=4 l= 514 cons:  SEQUENCE          
+    8:d=2  hl=2 l=   1 prim:   INTEGER           :01
+   11:d=2  hl=2 l=  29 cons:   SEQUENCE          
+   13:d=3  hl=2 l=  27 cons:    cont [ 1 ]        
+   15:d=4  hl=2 l=  25 cons:     cont [ 4 ]        
+   17:d=5  hl=2 l=  23 cons:      SEQUENCE          
+   19:d=6  hl=2 l=  21 cons:       SET               
+   21:d=7  hl=2 l=  19 cons:        SEQUENCE          
+   23:d=8  hl=2 l=   3 prim:         OBJECT            :serialNumber
+   28:d=8  hl=2 l=  12 prim:         PRINTABLESTRING   :200503202384
+   42:d=2  hl=3 l= 187 cons:   cont [ 0 ]        
+   45:d=3  hl=2 l=  87 cons:    SEQUENCE          
+   47:d=4  hl=2 l=  85 cons:     cont [ 4 ]        
+   49:d=5  hl=2 l=  83 cons:      SEQUENCE          
+   51:d=6  hl=2 l=  11 cons:       SET               
+   53:d=7  hl=2 l=   9 cons:        SEQUENCE          
+   55:d=8  hl=2 l=   3 prim:         OBJECT            :countryName
+   60:d=8  hl=2 l=   2 prim:         PRINTABLESTRING   :SE
+   64:d=6  hl=2 l=  35 cons:       SET               
+   66:d=7  hl=2 l=  33 cons:        SEQUENCE          
+   68:d=8  hl=2 l=   3 prim:         OBJECT            :organizationName
+   73:d=8  hl=2 l=  26 prim:         T61STRING         :Plikt- och prövningsverket
+  101:d=6  hl=2 l=  31 cons:       SET               
+  103:d=7  hl=2 l=  29 cons:        SEQUENCE          
+  105:d=8  hl=2 l=   3 prim:         OBJECT            :commonName
+  110:d=8  hl=2 l=  22 prim:         PRINTABLESTRING   :Pliktverket AM AA test
+  134:d=3  hl=2 l=  96 cons:    cont [ 0 ]        
+  136:d=4  hl=2 l=  90 cons:     SEQUENCE          
+  138:d=5  hl=2 l=  88 cons:      cont [ 4 ]        
+  140:d=6  hl=2 l=  86 cons:       SEQUENCE          
+  142:d=7  hl=2 l=  11 cons:        SET               
+  144:d=8  hl=2 l=   9 cons:         SEQUENCE          
+  146:d=9  hl=2 l=   3 prim:          OBJECT            :countryName
+  151:d=9  hl=2 l=   2 prim:          PRINTABLESTRING   :SE
+  155:d=7  hl=2 l=  46 cons:        SET               
+  157:d=8  hl=2 l=  44 cons:         SEQUENCE          
+  159:d=9  hl=2 l=   3 prim:          OBJECT            :organizationName
+  164:d=9  hl=2 l=  37 prim:          T61STRING         :Totalförsvarets Rekryteringsmyndighet
+  203:d=7  hl=2 l=  23 cons:        SET               
+  205:d=8  hl=2 l=  21 cons:         SEQUENCE          
+  207:d=9  hl=2 l=   3 prim:          OBJECT            :commonName
+  212:d=9  hl=2 l=  14 prim:          PRINTABLESTRING   :TRM Test CA v1
+  228:d=4  hl=2 l=   2 prim:     INTEGER           :0408
+  232:d=2  hl=2 l=  13 cons:   SEQUENCE          
+  234:d=3  hl=2 l=   9 prim:    OBJECT            :sha1WithRSAEncryption
+  245:d=3  hl=2 l=   0 prim:    NULL              
+  247:d=2  hl=2 l=   9 prim:   INTEGER           :F7D5A758807E58B1
+  258:d=2  hl=2 l=  34 cons:   SEQUENCE          
+  260:d=3  hl=2 l=  15 prim:    GENERALIZEDTIME   :20251205074825Z
+  277:d=3  hl=2 l=  15 prim:    GENERALIZEDTIME   :20251205080855Z
+  294:d=2  hl=2 l=   0 cons:   SEQUENCE          
+  296:d=2  hl=3 l= 223 cons:   SEQUENCE          
+  299:d=3  hl=2 l=   9 cons:    SEQUENCE          
+  301:d=4  hl=2 l=   3 prim:     OBJECT            :X509v3 No Revocation Available
+  306:d=4  hl=2 l=   2 prim:     OCTET STRING      [HEX DUMP]:0500
+  310:d=3  hl=2 l=  70 cons:    SEQUENCE          
+  312:d=4  hl=2 l=   3 prim:     OBJECT            :X509v3 AC Targeting
+  317:d=4  hl=2 l=   1 prim:     BOOLEAN           :255
+  320:d=4  hl=2 l=  60 prim:     OCTET STRING      [HEX DUMP]:303AA038863668747470733A2F2F6D696E736964612E706C696B747665726B65742E6C6F63616C3A383434332F706572736F6E2F6D696E2D73696461
+  382:d=3  hl=2 l=  59 cons:    SEQUENCE          
+  384:d=4  hl=2 l=   6 prim:     OBJECT            :1.2.752.54.13.1
+  392:d=4  hl=2 l=  49 prim:     OCTET STRING      [HEX DUMP]:302F0C067061737377641625687474703A2F2F69642E656C65676E616D6E64656E2E73652F6C6F612F312E302F6C6F6132
+  443:d=3  hl=2 l=  77 cons:    SEQUENCE          
+  445:d=4  hl=2 l=   6 prim:     OBJECT            :1.2.752.54.13.2
+  453:d=4  hl=2 l=  67 prim:     OCTET STRING      [HEX DUMP]:3041301816096970416464726573730C0B31302E35342E31372E32363025160D617574685265666572656E63650C143646394F7872786942353949506B49794F566B68
+  522:d=1  hl=2 l=  13 cons:  SEQUENCE          
+  524:d=2  hl=2 l=   9 prim:   OBJECT            :sha1WithRSAEncryption
+  535:d=2  hl=2 l=   0 prim:   NULL              
+  537:d=1  hl=4 l= 257 prim:  BIT STRING        

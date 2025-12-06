@@ -1,0 +1,15 @@
+# 1) Dekoda till DER
+base64 -d -i blob.b64 -o blob.der
+
+# 2) Försök ASN.1-dump
+openssl asn1parse -in blob.der -inform DER -i
+
+# 3) Försök tolka som PKCS#7 / CMS (om det är en SignedData-kapsel)
+openssl pkcs7 -inform DER -in blob.der -print_certs -text -noout
+
+# 4) Leta efter inbäddade certifikat genom att söka efter "3082" och försöka parsning:
+# (om asn1parse visar offsets för inbäddade certifikat — ta offset och extrahera)
+# Exempel: om asn1parse visar en sekvens på offset 123, skriv ut bytes därifrån:
+# dd if=blob.der of=cand.der bs=1 skip=123 count=<längd-från-asn1parse>
+# och sedan:
+openssl x509 -in cand.der -inform DER -text -noout

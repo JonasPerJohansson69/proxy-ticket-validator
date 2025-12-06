@@ -1,21 +1,26 @@
 package se.jj.security;
 
 
+import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1InputStream;
+import org.bouncycastle.asn1.ASN1Primitive;
 import org.bouncycastle.cert.X509AttributeCertificateHolder;
+import org.bouncycastle.asn1.x509.Attribute;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.ByteArrayInputStream;
 import java.util.Arrays;
 import java.util.Base64;
+import java.util.stream.Stream;
 
 
 public class AttributeCertificateParser {
 
     private static final Logger logger = LoggerFactory.getLogger(AttributeCertificateParser.class);
 
-    public record ACInfo(String holderSerial, String notBefore, String notAfter, String algorithm, byte[] signature) {
+    public record ACInfo(String holderSerial, String notBefore, String notAfter,
+                         java.util.Optional<org.bouncycastle.asn1.x500.X500Name> personalNumber, String algorithm, byte[] signature) {
     }
 
     public ACInfo parse(String base64) throws Exception {
@@ -34,9 +39,27 @@ public class AttributeCertificateParser {
             byte[] signature = holder.getSignature();
             Arrays.stream(holder.getIssuer().getNames()).forEach(System.out::println);
 
-            final ACInfo acInfo = new ACInfo(serial, notBefore, notAfter, algorithm, signature);
+            logger.info("Attributes {}", holder.getAttributes().length);
+            Stream.of(holder.getAttributes())
+                    .forEach(attr -> {
+                        logger.info("OID: " + attr.getAttrType().getId());
+                        values(attr).forEach(value ->
+                                logger.info("  Value: " + value));
+                    });
+
+            var first = Stream.ofNullable(holder.getHolder().getEntityNames())
+                    .flatMap(Stream::of)
+                    .findFirst();
+
+            final ACInfo acInfo = new ACInfo(serial, notBefore, notAfter, first, algorithm, signature);
             logger.info("Parsed data {}", acInfo.toString());
             return acInfo;
         }
+    }
+
+    private static Stream<String> values(Attribute attribute) {
+        return Stream.of(attribute.getAttributeValues())
+                .map(ASN1Encodable::toASN1Primitive)
+                .map(ASN1Primitive::toString);
     }
 }

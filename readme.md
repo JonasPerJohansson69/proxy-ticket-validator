@@ -18,3 +18,16 @@ mvn -DskipTests package
 
 # 2) För att generera test certifikat kör programmet (jar-with-dependencies skapas av assembly-plugin)
 java -jar target/proxy-ticket-validator-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+`@Inject
+DomainCacertsLoader cacerts;
+
+public void verifyCert() {
+cacerts.listAliases();
+
+    Certificate cert = cacerts.getCertificate("myservercert");
+    if (cert != null) {
+        System.out.println("Certifikat hittat: " + cert);
+    }
+}
+`

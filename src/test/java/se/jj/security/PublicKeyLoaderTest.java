@@ -8,8 +8,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 public class PublicKeyLoaderTest {
-
-
     @Test
     public void testLoadPublicKey() throws Exception {
         Path keyPath = Path.of("src/test/resources/testkey.pub");

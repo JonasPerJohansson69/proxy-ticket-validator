@@ -32,7 +32,7 @@ import java.util.Date;
  * <p>
  * NOTE: For demo/test use only. Adjust fields, OIDs, keys and lifetimes for production.
  */
-public class AcGenerator {
+public class AttributeCertificateGenerator {
 
     public static void main(String[] args) throws Exception {
         Security.addProvider(new BouncyCastleProvider());

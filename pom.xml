@@ -30,12 +30,18 @@
             <version>${bouncycastle.version}</version>
         </dependency>
 
-        <!-- Optional: slf4j for nicer logging if du vill -->
+        <!-- SLF4J API -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.12</version>
+        </dependency>
+
+        <!-- SLF4J Simple logger implementation -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>2.0.9</version>
-            <scope>runtime</scope>
+            <version>2.0.12</version>
         </dependency>
 
         <!-- JUnit 5 -->
@@ -68,7 +74,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>se.jj.security.AcGenerator</mainClass>
+                            <mainClass>se.jj.security.AttributeCertificateGenerator</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

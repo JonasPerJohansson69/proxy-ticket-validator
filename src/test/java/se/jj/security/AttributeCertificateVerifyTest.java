@@ -12,7 +12,7 @@ import java.security.cert.X509Certificate;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
-public class ACVerifyTest {
+public class AttributeCertificateVerifyTest {
 
 
     @Test
@@ -23,10 +23,8 @@ public class ACVerifyTest {
         CertificateFactory cf = CertificateFactory.getInstance("X.509");
         X509Certificate issuer = (X509Certificate) cf.generateCertificate(new ByteArrayInputStream(issuerBytes));
 
-
-        ACVerify verifier = new ACVerify();
+        AttributeCertificateVerify verifier = new AttributeCertificateVerify();
         boolean result = verifier.verifyAC(acBytes, issuer);
-
 
         assertTrue(result, "Attribute certificate signature should verify");
     }
